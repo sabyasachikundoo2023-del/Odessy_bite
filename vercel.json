@@ -1,11 +1,9 @@
 {
   "buildCommand": "npm run build",
+  "cleanUrls": true,
   "routes": [
-    { "src": "/assets/(.*)", "dest": "/dist/client/assets/$1" },
-    { "src": "/favicon.svg", "dest": "/dist/client/favicon.svg" },
-    { "src": "/robots.txt", "dest": "/dist/client/robots.txt" },
-    { "src": "/api(?:/.*)?", "dest": "/api" },
     { "handle": "filesystem" },
+    { "src": "/api(?:/.*)?", "dest": "/api" },
     { "src": "/(.*)", "dest": "/api" }
   ]
 }

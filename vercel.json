@@ -1,6 +1,9 @@
 {
   "buildCommand": "npm run build",
   "routes": [
+    { "src": "/assets/(.*)", "dest": "/dist/client/assets/$1" },
+    { "src": "/favicon.svg", "dest": "/dist/client/favicon.svg" },
+    { "src": "/robots.txt", "dest": "/dist/client/robots.txt" },
     { "src": "/api(?:/.*)?", "dest": "/api" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/api" }
